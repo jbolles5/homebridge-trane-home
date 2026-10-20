@@ -1,0 +1,15 @@
+Homebridge Trane Home
+Copyright 2026 Homebridge Trane Home contributors
+
+The cloud protocol implementation and XL1050 test response formats are adapted
+from hvaclibs/nexia (Apache License 2.0), revision
+3a2b7d8461cecaba45ce35ba34c79b0173f426d9.
+https://github.com/hvaclibs/nexia
+
+The feature mapping was informed by Home Assistant Core's Nexia component
+(Apache License 2.0). This is an independent Homebridge implementation.
+https://github.com/home-assistant/core/tree/dev/homeassistant/components/nexia
+
+The bundled fixture is a reduced and sanitized adaptation, with synthetic IDs,
+names, and a second thermostat. This project is not affiliated with Trane,
+Home Assistant, or Apple.

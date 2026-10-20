@@ -1,0 +1,10 @@
+services:
+  dev:
+    image: node:24.20.0-bookworm-slim
+    working_dir: /app
+    volumes:
+      - .:/app
+      - dependencies:/app/node_modules
+    command: npm test
+volumes:
+  dependencies:

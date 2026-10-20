@@ -1,0 +1,62 @@
+{
+  "name": "homebridge-trane-home",
+  "version": "0.1.0",
+  "description": "Trane Home XL1050 thermostats for Homebridge",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "homebridge-plugin",
+    "supports-hap",
+    "trane",
+    "xl1050",
+    "nexia"
+  ],
+  "engines": {
+    "node": "^24.0.0",
+    "homebridge": "^2.4.0"
+  },
+  "files": [
+    "dist",
+    "config.schema.json",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "docs/installation.md",
+    "docs/testing.md",
+    "docs/reference/upstream.md",
+    "CHANGELOG.md",
+    "docs/publishing.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint . --max-warnings=0 && tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json --noEmit",
+    "test": "vitest run",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.0.0",
+    "eslint": "^10.13.0",
+    "homebridge": "2.4.0",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.72.0",
+    "vitest": "5.0.5"
+  },
+  "displayName": "Trane Home",
+  "author": "jbolles5",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbolles5/homebridge-trane-home.git"
+  },
+  "homepage": "https://github.com/jbolles5/homebridge-trane-home#readme",
+  "bugs": {
+    "url": "https://github.com/jbolles5/homebridge-trane-home/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

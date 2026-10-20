@@ -1,0 +1,1092 @@
+{
+  "success": true,
+  "result": {
+    "id": 100000,
+    "name": "Test house",
+    "_links": {
+      "child": [
+        {
+          "href": "https://www.tranehome.com/mobile/houses/100000/devices",
+          "data": {
+            "items": [
+              {
+                "id": 100001,
+                "name": "Downstairs",
+                "type": "TraneXl1050",
+                "system_status": "Cooling",
+                "connected": true,
+                "indoor_humidity": 45,
+                "has_outdoor_temperature": true,
+                "outdoor_temperature": 61,
+                "features": [
+                  {
+                    "name": "thermostat",
+                    "temperature": 74,
+                    "status": "Cooling",
+                    "status_icon": null,
+                    "actions": {
+                      "set_heat_setpoint": {
+                        "href": "https://www.mynexia.com/mobile/xxl_zones/100101/setpoints"
+                      },
+                      "set_cool_setpoint": {
+                        "href": "https://www.mynexia.com/mobile/xxl_zones/100101/setpoints"
+                      }
+                    },
+                    "setpoint_delta": 3,
+                    "scale": "f",
+                    "setpoint_increment": 1,
+                    "setpoint_heat_min": 55,
+                    "setpoint_heat_max": 90,
+                    "setpoint_cool_min": 60,
+                    "setpoint_cool_max": 99,
+                    "setpoint_heat": 68,
+                    "setpoint_cool": 73,
+                    "system_status": "Cooling"
+                  },
+                  {
+                    "name": "connection",
+                    "signal_strength": "unknown",
+                    "is_connected": true
+                  },
+                  {
+                    "name": "thermostat_mode",
+                    "label": "System Mode",
+                    "value": "AUTO",
+                    "display_value": "Auto",
+                    "options": [
+                      {
+                        "id": "thermostat_mode",
+                        "label": "System Mode",
+                        "value": "thermostat_mode",
+                        "header": true
+                      },
+                      {
+                        "value": "AUTO",
+                        "label": "Auto"
+                      },
+                      {
+                        "value": "COOL",
+                        "label": "Cooling"
+                      },
+                      {
+                        "value": "HEAT",
+                        "label": "Heating"
+                      },
+                      {
+                        "value": "OFF",
+                        "label": "Off"
+                      }
+                    ],
+                    "actions": {
+                      "update_thermostat_mode": {
+                        "method": "POST",
+                        "href": "https://www.mynexia.com/mobile/xxl_zones/100101/zone_mode"
+                      }
+                    }
+                  },
+                  {
+                    "name": "thermostat_fan_mode",
+                    "label": "Fan Mode",
+                    "options": [
+                      {
+                        "id": "thermostat_fan_mode",
+                        "label": "Fan Mode",
+                        "value": "thermostat_fan_mode",
+                        "header": true
+                      },
+                      {
+                        "value": "auto",
+                        "label": "Auto"
+                      },
+                      {
+                        "value": "on",
+                        "label": "On"
+                      },
+                      {
+                        "value": "circulate",
+                        "label": "Circulate"
+                      }
+                    ],
+                    "value": "circulate",
+                    "display_value": "Circulate",
+                    "status_icon": {
+                      "name": "thermostat_fan_off",
+                      "modifiers": []
+                    },
+                    "actions": {
+                      "update_thermostat_fan_mode": {
+                        "method": "POST",
+                        "href": "https://www.mynexia.com/mobile/xxl_thermostats/100001/fan_mode"
+                      }
+                    }
+                  },
+                  {
+                    "name": "thermostat_compressor_speed",
+                    "compressor_speed": 0
+                  }
+                ],
+                "settings": [
+                  {
+                    "type": "preset_selected",
+                    "title": "Preset",
+                    "current_value": 0,
+                    "options": [
+                      {
+                        "value": 0,
+                        "label": "None"
+                      },
+                      {
+                        "value": 1,
+                        "label": "Home"
+                      },
+                      {
+                        "value": 2,
+                        "label": "Away"
+                      },
+                      {
+                        "value": 3,
+                        "label": "Sleep"
+                      }
+                    ],
+                    "labels": [
+                      "None",
+                      "Home",
+                      "Away",
+                      "Sleep"
+                    ],
+                    "values": [
+                      0,
+                      1,
+                      2,
+                      3
+                    ],
+                    "_links": {
+                      "self": {
+                        "href": "https://www.mynexia.com/mobile/xxl_zones/100101/preset_selected"
+                      }
+                    }
+                  },
+                  {
+                    "type": "system_mode",
+                    "title": "System Mode",
+                    "current_value": "AUTO",
+                    "options": [
+                      {
+                        "value": "AUTO",
+                        "label": "Auto"
+                      },
+                      {
+                        "value": "COOL",
+                        "label": "Cooling"
+                      },
+                      {
+                        "value": "HEAT",
+                        "label": "Heating"
+                      },
+                      {
+                        "value": "OFF",
+                        "label": "Off"
+                      }
+                    ],
+                    "labels": [
+                      "Auto",
+                      "Cooling",
+                      "Heating",
+                      "Off"
+                    ],
+                    "values": [
+                      "AUTO",
+                      "COOL",
+                      "HEAT",
+                      "OFF"
+                    ],
+                    "_links": {
+                      "self": {
+                        "href": "https://www.mynexia.com/mobile/xxl_zones/100101/zone_mode"
+                      }
+                    }
+                  },
+                  {
+                    "type": "fan_mode",
+                    "title": "Fan Mode",
+                    "current_value": "circulate",
+                    "options": [
+                      {
+                        "value": "auto",
+                        "label": "Auto"
+                      },
+                      {
+                        "value": "on",
+                        "label": "On"
+                      },
+                      {
+                        "value": "circulate",
+                        "label": "Circulate"
+                      }
+                    ],
+                    "labels": [
+                      "Auto",
+                      "On",
+                      "Circulate"
+                    ],
+                    "values": [
+                      "auto",
+                      "on",
+                      "circulate"
+                    ],
+                    "_links": {
+                      "self": {
+                        "href": "https://www.mynexia.com/mobile/xxl_thermostats/100001/fan_mode"
+                      }
+                    }
+                  },
+                  {
+                    "type": "fan_speed",
+                    "title": "Fan Speed",
+                    "current_value": 0.5,
+                    "options": [
+                      {
+                        "value": 0.35,
+                        "label": "35%"
+                      },
+                      {
+                        "value": 0.4,
+                        "label": "40%"
+                      },
+                      {
+                        "value": 0.45,
+                        "label": "45%"
+                      },
+                      {
+                        "value": 0.5,
+                        "label": "50%"
+                      },
+                      {
+                        "value": 0.55,
+                        "label": "55%"
+                      },
+                      {
+                        "value": 0.6,
+                        "label": "60%"
+                      },
+                      {
+                        "value": 0.65,
+                        "label": "65%"
+                      },
+                      {
+                        "value": 0.7,
+                        "label": "70%"
+                      },
+                      {
+                        "value": 0.75,
+                        "label": "75%"
+                      },
+                      {
+                        "value": 0.8,
+                        "label": "80%"
+                      },
+                      {
+                        "value": 0.85,
+                        "label": "85%"
+                      },
+                      {
+                        "value": 0.9,
+                        "label": "90%"
+                      },
+                      {
+                        "value": 0.95,
+                        "label": "95%"
+                      },
+                      {
+                        "value": 1,
+                        "label": "100%"
+                      }
+                    ],
+                    "labels": [
+                      "35%",
+                      "40%",
+                      "45%",
+                      "50%",
+                      "55%",
+                      "60%",
+                      "65%",
+                      "70%",
+                      "75%",
+                      "80%",
+                      "85%",
+                      "90%",
+                      "95%",
+                      "100%"
+                    ],
+                    "values": [
+                      0.35,
+                      0.4,
+                      0.45,
+                      0.5,
+                      0.55,
+                      0.6,
+                      0.65,
+                      0.7,
+                      0.75,
+                      0.8,
+                      0.85,
+                      0.9,
+                      0.95,
+                      1
+                    ],
+                    "_links": {
+                      "self": {
+                        "href": "https://www.mynexia.com/mobile/xxl_thermostats/100001/fan_speed"
+                      }
+                    }
+                  },
+                  {
+                    "type": "air_cleaner_mode",
+                    "title": "Air Cleaner Mode",
+                    "current_value": "auto",
+                    "options": [
+                      {
+                        "value": "auto",
+                        "label": "Auto"
+                      },
+                      {
+                        "value": "quick",
+                        "label": "Quick"
+                      },
+                      {
+                        "value": "allergy",
+                        "label": "Allergy"
+                      }
+                    ],
+                    "labels": [
+                      "Auto",
+                      "Quick",
+                      "Allergy"
+                    ],
+                    "values": [
+                      "auto",
+                      "quick",
+                      "allergy"
+                    ],
+                    "_links": {
+                      "self": {
+                        "href": "https://www.mynexia.com/mobile/xxl_thermostats/100001/air_cleaner_mode"
+                      }
+                    }
+                  },
+                  {
+                    "type": "dehumidify",
+                    "title": "Cooling Dehumidify Set Point",
+                    "current_value": 0.5,
+                    "options": [
+                      {
+                        "value": 0.35,
+                        "label": "35%"
+                      },
+                      {
+                        "value": 0.4,
+                        "label": "40%"
+                      },
+                      {
+                        "value": 0.45,
+                        "label": "45%"
+                      },
+                      {
+                        "value": 0.5,
+                        "label": "50%"
+                      },
+                      {
+                        "value": 0.55,
+                        "label": "55%"
+                      },
+                      {
+                        "value": 0.6,
+                        "label": "60%"
+                      },
+                      {
+                        "value": 0.65,
+                        "label": "65%"
+                      }
+                    ],
+                    "labels": [
+                      "35%",
+                      "40%",
+                      "45%",
+                      "50%",
+                      "55%",
+                      "60%",
+                      "65%"
+                    ],
+                    "values": [
+                      0.35,
+                      0.4,
+                      0.45,
+                      0.5,
+                      0.55,
+                      0.6,
+                      0.65
+                    ],
+                    "_links": {
+                      "self": {
+                        "href": "https://www.mynexia.com/mobile/xxl_thermostats/100001/dehumidify"
+                      }
+                    }
+                  },
+                  {
+                    "type": "emergency_heat",
+                    "title": "Emergency Heat",
+                    "current_value": false,
+                    "options": [
+                      {
+                        "value": true,
+                        "label": "ON"
+                      },
+                      {
+                        "value": false,
+                        "label": "OFF"
+                      }
+                    ],
+                    "labels": [
+                      "ON",
+                      "OFF"
+                    ],
+                    "values": [
+                      true,
+                      false
+                    ],
+                    "_links": {
+                      "self": {
+                        "href": "https://www.mynexia.com/mobile/xxl_thermostats/100001/emergency_heat"
+                      }
+                    }
+                  }
+                ],
+                "zones": [
+                  {
+                    "id": 100101,
+                    "name": "NativeZone",
+                    "temperature": 74,
+                    "setpoints": {
+                      "heat": 68,
+                      "cool": 73
+                    },
+                    "operating_state": "",
+                    "zone_status": "",
+                    "settings": [],
+                    "features": [
+                      {
+                        "name": "thermostat",
+                        "temperature": 74,
+                        "status": "",
+                        "status_icon": null,
+                        "actions": {
+                          "set_heat_setpoint": {
+                            "href": "https://www.mynexia.com/mobile/xxl_zones/100101/setpoints"
+                          },
+                          "set_cool_setpoint": {
+                            "href": "https://www.mynexia.com/mobile/xxl_zones/100101/setpoints"
+                          }
+                        },
+                        "setpoint_delta": 3,
+                        "scale": "f",
+                        "setpoint_increment": 1,
+                        "setpoint_heat_min": 55,
+                        "setpoint_heat_max": 90,
+                        "setpoint_cool_min": 60,
+                        "setpoint_cool_max": 99,
+                        "setpoint_heat": 68,
+                        "setpoint_cool": 73,
+                        "system_status": "Cooling"
+                      },
+                      {
+                        "name": "connection",
+                        "signal_strength": "unknown",
+                        "is_connected": true
+                      },
+                      {
+                        "name": "thermostat_mode",
+                        "label": "System Mode",
+                        "value": "AUTO",
+                        "display_value": "Auto",
+                        "options": [
+                          {
+                            "id": "thermostat_mode",
+                            "label": "System Mode",
+                            "value": "thermostat_mode",
+                            "header": true
+                          },
+                          {
+                            "value": "AUTO",
+                            "label": "Auto"
+                          },
+                          {
+                            "value": "COOL",
+                            "label": "Cooling"
+                          },
+                          {
+                            "value": "HEAT",
+                            "label": "Heating"
+                          },
+                          {
+                            "value": "OFF",
+                            "label": "Off"
+                          }
+                        ],
+                        "actions": {
+                          "update_thermostat_mode": {
+                            "method": "POST",
+                            "href": "https://www.mynexia.com/mobile/xxl_zones/100101/zone_mode"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 100002,
+                "name": "Upstairs",
+                "type": "TraneXl1050",
+                "system_status": "Cooling",
+                "connected": true,
+                "indoor_humidity": 45,
+                "has_outdoor_temperature": true,
+                "outdoor_temperature": 61,
+                "features": [
+                  {
+                    "name": "thermostat",
+                    "temperature": 74,
+                    "status": "Cooling",
+                    "status_icon": null,
+                    "actions": {
+                      "set_heat_setpoint": {
+                        "href": "https://www.mynexia.com/mobile/xxl_zones/100102/setpoints"
+                      },
+                      "set_cool_setpoint": {
+                        "href": "https://www.mynexia.com/mobile/xxl_zones/100102/setpoints"
+                      }
+                    },
+                    "setpoint_delta": 3,
+                    "scale": "f",
+                    "setpoint_increment": 1,
+                    "setpoint_heat_min": 55,
+                    "setpoint_heat_max": 90,
+                    "setpoint_cool_min": 60,
+                    "setpoint_cool_max": 99,
+                    "setpoint_heat": 68,
+                    "setpoint_cool": 73,
+                    "system_status": "Cooling"
+                  },
+                  {
+                    "name": "connection",
+                    "signal_strength": "unknown",
+                    "is_connected": true
+                  },
+                  {
+                    "name": "thermostat_mode",
+                    "label": "System Mode",
+                    "value": "AUTO",
+                    "display_value": "Auto",
+                    "options": [
+                      {
+                        "id": "thermostat_mode",
+                        "label": "System Mode",
+                        "value": "thermostat_mode",
+                        "header": true
+                      },
+                      {
+                        "value": "AUTO",
+                        "label": "Auto"
+                      },
+                      {
+                        "value": "COOL",
+                        "label": "Cooling"
+                      },
+                      {
+                        "value": "HEAT",
+                        "label": "Heating"
+                      },
+                      {
+                        "value": "OFF",
+                        "label": "Off"
+                      }
+                    ],
+                    "actions": {
+                      "update_thermostat_mode": {
+                        "method": "POST",
+                        "href": "https://www.mynexia.com/mobile/xxl_zones/100102/zone_mode"
+                      }
+                    }
+                  },
+                  {
+                    "name": "thermostat_fan_mode",
+                    "label": "Fan Mode",
+                    "options": [
+                      {
+                        "id": "thermostat_fan_mode",
+                        "label": "Fan Mode",
+                        "value": "thermostat_fan_mode",
+                        "header": true
+                      },
+                      {
+                        "value": "auto",
+                        "label": "Auto"
+                      },
+                      {
+                        "value": "on",
+                        "label": "On"
+                      },
+                      {
+                        "value": "circulate",
+                        "label": "Circulate"
+                      }
+                    ],
+                    "value": "circulate",
+                    "display_value": "Circulate",
+                    "status_icon": {
+                      "name": "thermostat_fan_off",
+                      "modifiers": []
+                    },
+                    "actions": {
+                      "update_thermostat_fan_mode": {
+                        "method": "POST",
+                        "href": "https://www.mynexia.com/mobile/xxl_thermostats/100002/fan_mode"
+                      }
+                    }
+                  },
+                  {
+                    "name": "thermostat_compressor_speed",
+                    "compressor_speed": 0
+                  }
+                ],
+                "settings": [
+                  {
+                    "type": "preset_selected",
+                    "title": "Preset",
+                    "current_value": 0,
+                    "options": [
+                      {
+                        "value": 0,
+                        "label": "None"
+                      },
+                      {
+                        "value": 1,
+                        "label": "Home"
+                      },
+                      {
+                        "value": 2,
+                        "label": "Away"
+                      },
+                      {
+                        "value": 3,
+                        "label": "Sleep"
+                      }
+                    ],
+                    "labels": [
+                      "None",
+                      "Home",
+                      "Away",
+                      "Sleep"
+                    ],
+                    "values": [
+                      0,
+                      1,
+                      2,
+                      3
+                    ],
+                    "_links": {
+                      "self": {
+                        "href": "https://www.mynexia.com/mobile/xxl_zones/100102/preset_selected"
+                      }
+                    }
+                  },
+                  {
+                    "type": "system_mode",
+                    "title": "System Mode",
+                    "current_value": "AUTO",
+                    "options": [
+                      {
+                        "value": "AUTO",
+                        "label": "Auto"
+                      },
+                      {
+                        "value": "COOL",
+                        "label": "Cooling"
+                      },
+                      {
+                        "value": "HEAT",
+                        "label": "Heating"
+                      },
+                      {
+                        "value": "OFF",
+                        "label": "Off"
+                      }
+                    ],
+                    "labels": [
+                      "Auto",
+                      "Cooling",
+                      "Heating",
+                      "Off"
+                    ],
+                    "values": [
+                      "AUTO",
+                      "COOL",
+                      "HEAT",
+                      "OFF"
+                    ],
+                    "_links": {
+                      "self": {
+                        "href": "https://www.mynexia.com/mobile/xxl_zones/100102/zone_mode"
+                      }
+                    }
+                  },
+                  {
+                    "type": "fan_mode",
+                    "title": "Fan Mode",
+                    "current_value": "circulate",
+                    "options": [
+                      {
+                        "value": "auto",
+                        "label": "Auto"
+                      },
+                      {
+                        "value": "on",
+                        "label": "On"
+                      },
+                      {
+                        "value": "circulate",
+                        "label": "Circulate"
+                      }
+                    ],
+                    "labels": [
+                      "Auto",
+                      "On",
+                      "Circulate"
+                    ],
+                    "values": [
+                      "auto",
+                      "on",
+                      "circulate"
+                    ],
+                    "_links": {
+                      "self": {
+                        "href": "https://www.mynexia.com/mobile/xxl_thermostats/100002/fan_mode"
+                      }
+                    }
+                  },
+                  {
+                    "type": "fan_speed",
+                    "title": "Fan Speed",
+                    "current_value": 0.5,
+                    "options": [
+                      {
+                        "value": 0.35,
+                        "label": "35%"
+                      },
+                      {
+                        "value": 0.4,
+                        "label": "40%"
+                      },
+                      {
+                        "value": 0.45,
+                        "label": "45%"
+                      },
+                      {
+                        "value": 0.5,
+                        "label": "50%"
+                      },
+                      {
+                        "value": 0.55,
+                        "label": "55%"
+                      },
+                      {
+                        "value": 0.6,
+                        "label": "60%"
+                      },
+                      {
+                        "value": 0.65,
+                        "label": "65%"
+                      },
+                      {
+                        "value": 0.7,
+                        "label": "70%"
+                      },
+                      {
+                        "value": 0.75,
+                        "label": "75%"
+                      },
+                      {
+                        "value": 0.8,
+                        "label": "80%"
+                      },
+                      {
+                        "value": 0.85,
+                        "label": "85%"
+                      },
+                      {
+                        "value": 0.9,
+                        "label": "90%"
+                      },
+                      {
+                        "value": 0.95,
+                        "label": "95%"
+                      },
+                      {
+                        "value": 1,
+                        "label": "100%"
+                      }
+                    ],
+                    "labels": [
+                      "35%",
+                      "40%",
+                      "45%",
+                      "50%",
+                      "55%",
+                      "60%",
+                      "65%",
+                      "70%",
+                      "75%",
+                      "80%",
+                      "85%",
+                      "90%",
+                      "95%",
+                      "100%"
+                    ],
+                    "values": [
+                      0.35,
+                      0.4,
+                      0.45,
+                      0.5,
+                      0.55,
+                      0.6,
+                      0.65,
+                      0.7,
+                      0.75,
+                      0.8,
+                      0.85,
+                      0.9,
+                      0.95,
+                      1
+                    ],
+                    "_links": {
+                      "self": {
+                        "href": "https://www.mynexia.com/mobile/xxl_thermostats/100002/fan_speed"
+                      }
+                    }
+                  },
+                  {
+                    "type": "air_cleaner_mode",
+                    "title": "Air Cleaner Mode",
+                    "current_value": "auto",
+                    "options": [
+                      {
+                        "value": "auto",
+                        "label": "Auto"
+                      },
+                      {
+                        "value": "quick",
+                        "label": "Quick"
+                      },
+                      {
+                        "value": "allergy",
+                        "label": "Allergy"
+                      }
+                    ],
+                    "labels": [
+                      "Auto",
+                      "Quick",
+                      "Allergy"
+                    ],
+                    "values": [
+                      "auto",
+                      "quick",
+                      "allergy"
+                    ],
+                    "_links": {
+                      "self": {
+                        "href": "https://www.mynexia.com/mobile/xxl_thermostats/100002/air_cleaner_mode"
+                      }
+                    }
+                  },
+                  {
+                    "type": "dehumidify",
+                    "title": "Cooling Dehumidify Set Point",
+                    "current_value": 0.5,
+                    "options": [
+                      {
+                        "value": 0.35,
+                        "label": "35%"
+                      },
+                      {
+                        "value": 0.4,
+                        "label": "40%"
+                      },
+                      {
+                        "value": 0.45,
+                        "label": "45%"
+                      },
+                      {
+                        "value": 0.5,
+                        "label": "50%"
+                      },
+                      {
+                        "value": 0.55,
+                        "label": "55%"
+                      },
+                      {
+                        "value": 0.6,
+                        "label": "60%"
+                      },
+                      {
+                        "value": 0.65,
+                        "label": "65%"
+                      }
+                    ],
+                    "labels": [
+                      "35%",
+                      "40%",
+                      "45%",
+                      "50%",
+                      "55%",
+                      "60%",
+                      "65%"
+                    ],
+                    "values": [
+                      0.35,
+                      0.4,
+                      0.45,
+                      0.5,
+                      0.55,
+                      0.6,
+                      0.65
+                    ],
+                    "_links": {
+                      "self": {
+                        "href": "https://www.mynexia.com/mobile/xxl_thermostats/100002/dehumidify"
+                      }
+                    }
+                  },
+                  {
+                    "type": "emergency_heat",
+                    "title": "Emergency Heat",
+                    "current_value": false,
+                    "options": [
+                      {
+                        "value": true,
+                        "label": "ON"
+                      },
+                      {
+                        "value": false,
+                        "label": "OFF"
+                      }
+                    ],
+                    "labels": [
+                      "ON",
+                      "OFF"
+                    ],
+                    "values": [
+                      true,
+                      false
+                    ],
+                    "_links": {
+                      "self": {
+                        "href": "https://www.mynexia.com/mobile/xxl_thermostats/100002/emergency_heat"
+                      }
+                    }
+                  }
+                ],
+                "zones": [
+                  {
+                    "id": 100102,
+                    "name": "NativeZone",
+                    "temperature": 74,
+                    "setpoints": {
+                      "heat": 68,
+                      "cool": 73
+                    },
+                    "operating_state": "",
+                    "zone_status": "",
+                    "settings": [],
+                    "features": [
+                      {
+                        "name": "thermostat",
+                        "temperature": 74,
+                        "status": "",
+                        "status_icon": null,
+                        "actions": {
+                          "set_heat_setpoint": {
+                            "href": "https://www.mynexia.com/mobile/xxl_zones/100102/setpoints"
+                          },
+                          "set_cool_setpoint": {
+                            "href": "https://www.mynexia.com/mobile/xxl_zones/100102/setpoints"
+                          }
+                        },
+                        "setpoint_delta": 3,
+                        "scale": "f",
+                        "setpoint_increment": 1,
+                        "setpoint_heat_min": 55,
+                        "setpoint_heat_max": 90,
+                        "setpoint_cool_min": 60,
+                        "setpoint_cool_max": 99,
+                        "setpoint_heat": 68,
+                        "setpoint_cool": 73,
+                        "system_status": "Cooling"
+                      },
+                      {
+                        "name": "connection",
+                        "signal_strength": "unknown",
+                        "is_connected": true
+                      },
+                      {
+                        "name": "thermostat_mode",
+                        "label": "System Mode",
+                        "value": "AUTO",
+                        "display_value": "Auto",
+                        "options": [
+                          {
+                            "id": "thermostat_mode",
+                            "label": "System Mode",
+                            "value": "thermostat_mode",
+                            "header": true
+                          },
+                          {
+                            "value": "AUTO",
+                            "label": "Auto"
+                          },
+                          {
+                            "value": "COOL",
+                            "label": "Cooling"
+                          },
+                          {
+                            "value": "HEAT",
+                            "label": "Heating"
+                          },
+                          {
+                            "value": "OFF",
+                            "label": "Off"
+                          }
+                        ],
+                        "actions": {
+                          "update_thermostat_mode": {
+                            "method": "POST",
+                            "href": "https://www.mynexia.com/mobile/xxl_zones/100102/zone_mode"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "href": "https://www.tranehome.com/mobile/houses/100000/automations",
+          "data": {
+            "items": []
+          }
+        }
+      ]
+    }
+  }
+}

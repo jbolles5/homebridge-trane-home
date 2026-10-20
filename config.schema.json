@@ -1,0 +1,133 @@
+{
+  "pluginAlias": "TraneHome",
+  "pluginType": "platform",
+  "singular": true,
+  "headerDisplay": "Trane Home XL1050. Start with read-only discovery. Enter credentials here, then save and restart the child bridge. Cloud polling is shared across thermostats.",
+  "schema": {
+    "type": "object",
+    "required": ["username", "password"],
+    "properties": {
+      "name": { "title": "Name", "type": "string", "default": "Trane Home" },
+      "username": { "title": "Trane account email", "type": "string" },
+      "password": { "title": "Trane password", "type": "string" },
+      "readOnly": {
+        "title": "Read-only discovery (recommended for first run)",
+        "type": "boolean",
+        "default": true,
+        "description": "Blocks temperature, mode and equipment changes, including automation activation."
+      },
+      "brand": {
+        "title": "Account brand",
+        "type": "string",
+        "enum": ["trane", "nexia", "asair"],
+        "default": "trane",
+        "description": "Validated with Trane XL1050 thermostats. Other brands are untested."
+      },
+      "houseId": { "title": "House ID (only for accounts with multiple houses)", "type": "string" },
+      "pollIntervalSeconds": {
+        "title": "Poll interval (seconds)",
+        "type": "integer",
+        "default": 120,
+        "minimum": 60,
+        "maximum": 3600
+      },
+      "staleAfterSeconds": {
+        "title": "Stale after (seconds)",
+        "type": "integer",
+        "default": 360,
+        "minimum": 120,
+        "maximum": 86400,
+        "description": "Must be at least twice the poll interval."
+      },
+      "holdOnSetpointChange": {
+        "title": "Enable permanent hold for manual temperature changes",
+        "type": "boolean",
+        "default": false
+      },
+      "exposeFanModes": {
+        "title": "Fan Auto / On / Circulate selectors",
+        "type": "boolean",
+        "default": true
+      },
+      "exposePresets": { "title": "Preset selectors", "type": "boolean", "default": false },
+      "exposeEmergencyHeat": {
+        "title": "Emergency heat switch (if supported)",
+        "type": "boolean",
+        "default": false
+      },
+      "exposeOutdoorTemperature": {
+        "title": "Outdoor temperature (if supported)",
+        "type": "boolean",
+        "default": false
+      },
+      "exposeHumidityTargets": {
+        "title": "Humidity target (mode dependent)",
+        "type": "boolean",
+        "default": false
+      },
+      "exposeAirCleaner": { "title": "Air cleaner mode selectors", "type": "boolean", "default": false },
+      "exposeFanSpeed": { "title": "Variable fan speed control", "type": "boolean", "default": false },
+      "enableRoomIQ": {
+        "title": "RoomIQ sensors and inclusion switches",
+        "type": "boolean",
+        "default": false,
+        "description": "Adds cloud requests and can take 5–40 seconds to refresh. Leave off unless using RoomIQ."
+      },
+      "exposeAutomations": {
+        "title": "Vendor automations as momentary switches",
+        "type": "boolean",
+        "default": false
+      },
+      "exposeAdvancedCharacteristics": {
+        "title": "Advanced diagnostic and humidity characteristics",
+        "type": "boolean",
+        "default": false,
+        "description": "Requires a compatible third-party HomeKit app for full display."
+      },
+      "thermostatIds": {
+        "title": "Thermostat allowlist (empty discovers all)",
+        "type": "array",
+        "items": { "type": "string" },
+        "default": []
+      },
+      "names": {
+        "title": "Name overrides keyed by thermostat ID or thermostatID:zoneID",
+        "type": "object",
+        "additionalProperties": { "type": "string" },
+        "default": {}
+      }
+    }
+  },
+  "layout": [
+    "name",
+    "username",
+    { "key": "password", "type": "password" },
+    "readOnly",
+    {
+      "type": "fieldset",
+      "title": "Controls and sensors",
+      "expandable": true,
+      "expanded": false,
+      "items": [
+        "holdOnSetpointChange",
+        "exposeFanModes",
+        "exposePresets",
+        "exposeEmergencyHeat",
+        "exposeOutdoorTemperature",
+        "exposeHumidityTargets",
+        "exposeAirCleaner",
+        "exposeFanSpeed",
+        "enableRoomIQ",
+        "exposeAutomations",
+        "exposeAdvancedCharacteristics"
+      ]
+    },
+    {
+      "type": "fieldset",
+      "title": "Advanced configuration",
+      "expandable": true,
+      "expanded": false,
+      "items": ["brand", "houseId", "pollIntervalSeconds", "staleAfterSeconds", "thermostatIds", "names"]
+    }
+  ]
+}

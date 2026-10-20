@@ -1,0 +1,12 @@
+name: Plugin checks
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t trane-homebridge-dev .
+      - run: docker run --rm trane-homebridge-dev npm run lint
+      - run: docker run --rm trane-homebridge-dev npm test
+      - run: docker run --rm trane-homebridge-dev npm run build
+      - run: docker run --rm trane-homebridge-dev npm pack --dry-run
